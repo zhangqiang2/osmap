@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>开源社区</title>
+    <link rel="stylesheet" href="../css/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vendor/bootstrap/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../css/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/echarts/echarts.min.js"></script>
+    <script src="../js/vendor/bootstrap/table/bootstrap-table.min.js"></script>
+    <script src="../js/detail.js"></script>
+</head>
+<style>
+    #source_info {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    }
+
+    #source_info header {
+    font-size: 30px;
+    color: #81acd5;
+    }
+
+    #source_info .content {
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    }
+
+    #source_info .raw {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    width: 100%
+    }
+
+    #source_info .raw .raw-raw {
+    width: 50%
+    }
+
+    #source_info .raw .mylabel {
+    width: 120px;
+    text-align: right;
+    float: left;
+    }
+
+    #source_info .raw .value {
+    margin-left: 120px
+    }
+
+    #source_info .raw span {
+    font-size: 18px;
+    }
+
+    #zte_info .header {
+    font-size: 18px;
+    padding: 10px;
+    color: #81acd5;
+    }
+
+    table[id$='Table'] tbody tr td {
+    font-size: 12px;
+    padding: 10px;
+    color: #828890;
+    }
+
+    table[id$='Table'] thead th {
+    background-color: #eaeff3;
+    color: #3A3F45;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Times New Roman", SimSun;
+    }
+
+    table[id$='Table'] tbody tr:nth-child(odd) td {
+    background-color: #FFFFFF;
+    }
+
+    table[id$='Table'] tbody tr:nth-child(even) td {
+    background-color: #F5F7F9;
+    }
+</style>
+
+<body>
+<div class="col-md-8 col-md-offset-2" id="source_info">
+    <header></header>
+    <div class="content">
+        <div class="raw">
+            <div class="raw-raw" id="projectName">
+                <div class="mylabel"><span>项目名称：</span></div>
+                <div class="value"></div>
+            </div>
+            <div class="raw-raw" id="prjUrl">
+                <div class="mylabel"><span>项目主页：</span></div>
+                <div class="value"></div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="raw-raw" id="communityName">
+                <div class="mylabel"><span>社区名称：</span></div>
+                <div class="value"></div>
+            </div>
+            <div class="raw-raw" id="communityUrl">
+                <div class="mylabel"><span>社区地址：</span></div>
+                <div class="value"></div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="raw-raw" id="licenseName">
+                <div class="mylabel"><span>许可证：</span></div>
+                <div class="value"></div>
+            </div>
+            <div class="raw-raw" id="licenseInternalUrl">
+                <div class="mylabel"><span>许可证地址：</span></div>
+                <div class="value"></div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="raw-raw" id="orgsourceAddr">
+                <div class="mylabel"><span>源地址：</span></div>
+                <div class="value"></div>
+            </div>
+            <div class="raw-raw" id="downloadUrl">
+                <div class="mylabel"><span>下载地址：</span></div>
+                <div class="value"></div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="raw-raw" id="foundationName">
+                <div class="mylabel"><span>基金会：</span></div>
+                <div class="value"></div>
+            </div>
+            <div class="raw-raw" id="commitNum3Months">
+                <div class="mylabel"><span>提交数：</span></div>
+                <div class="value"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-8 col-md-offset-2" id="zte_info" style="display: none;">
+    <div id="selection" style="margin: 10px 0"><span>选择版本</span>
+        <select id="select_version">
+        </select>
+    </div>
+    <div style="width: 100%;clear: both;">
+        <div class="header" style="width: 100%;">提交数排名</div>
+        <div style="height: 260px;width: 50%;float: left;padding: 10px">
+            <div id="companyChart" style="width: 450px;height: 250px"></div>
+        </div>
+        <div class="col-md-6">
+            <table id="companyTable">
+            </table>
+        </div>
+    </div>
+    <div style="width: 100%;clear: both;">
+        <div class="header" style="width: 100%;">ZTE个人提交数</div>
+        <div style="height: 260px;    width: 50%;float: left;">
+            <div id="contributorChart" style="width: 450px;height: 250px"> </div>
+        </div>
+        <div class="col-md-6">
+            <table id="contributorTable">
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

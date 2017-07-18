@@ -1,0 +1,17 @@
+#search{
+	border: 1px #ccc solid;
+    box-shadow: none; 
+    border-radius: 0;
+    min-height: 20px;
+    padding: 19px;
+    background-color: #EAEAEA;
+
+}
+
+.form-group .btn-group.bootstrap-select{
+	 
+	
+}
+.col-sm-8{
+ padding: 0;
+}

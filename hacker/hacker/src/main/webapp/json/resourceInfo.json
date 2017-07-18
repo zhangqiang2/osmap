@@ -1,0 +1,39 @@
+{
+    "fields": [
+        { "fieldName": "clusterId", "fieldValue": "0001" },
+        { "fieldName": "clusterName", "fieldValue": "cluster" },
+        { "fieldName": "hostIp", "fieldValue": "10.43.156.1" },
+        { "fieldName": "hostName", "fieldValue": "zdh1" },
+        { "fieldName": "serviceName", "fieldValue": "zookeeper" },
+        { "fieldName": "serviceId", "fieldValue": "dap.manager.zookeeper" },
+        { "fieldName": "serviceInstanceId", "fieldValue": "zookeeper1" },
+        { "fieldName": "serviceInstanceName", "fieldValue": "zookeeper1" },
+        { "fieldName": "roleName", "fieldValue": "HQuorumPeer" },
+        { "fieldName": "roleId", "fieldValue": "dap.manager.zookeeper.HQuorumPeer" }
+
+    ],
+    "fields": [
+        { "fieldName": "clusterId", "fieldValue": "0001" },
+        { "fieldName": "clusterName", "fieldValue": "cluster" },
+        { "fieldName": "hostIp", "fieldValue": "10.43.156.2" },
+        { "fieldName": "hostName", "fieldValue": "zdh2" },
+        { "fieldName": "serviceName", "fieldValue": "zookeeper" },
+        { "fieldName": "serviceId", "fieldValue": "dap.manager.zookeeper" },
+        { "fieldName": "serviceInstanceId", "fieldValue": "zookeeper1" },
+        { "fieldName": "serviceInstanceName", "fieldValue": "zookeeper1" },
+        { "fieldName": "roleName", "fieldValue": "HQuorumPeer" },
+        { "fieldName": "roleId", "fieldValue": "dap.manager.zookeeper.HQuorumPeer" }
+    ],
+    "fields": [
+        { "fieldName": "clusterId", "fieldValue": "0001" },
+        { "fieldName": "clusterName", "fieldValue": "cluster" },
+        { "fieldName": "hostIp", "fieldValue": "10.43.156.1" },
+        { "fieldName": "hostName", "fieldValue": "zdh1" },
+        { "fieldName": "serviceName", "fieldValue": "hdfs" },
+        { "fieldName": "serviceId", "fieldValue": "dap.manager.hdfs" },
+        { "fieldName": "serviceInstanceId", "fieldValue": "hdfs" },
+        { "fieldName": "serviceInstanceName", "fieldValue": "hdfs" },
+        { "fieldName": "roleName", "fieldValue": "DataNode" },
+        { "fieldName": "roleId", "fieldValue": "dap.manager.hdfs.DataNode" }
+    ],
+}

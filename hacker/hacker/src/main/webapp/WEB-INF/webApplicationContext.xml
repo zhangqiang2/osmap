@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <context:component-scan base-package="com.zte.hacker.*"/>
+
+
+    <!-- 开启MVC注解功能 ，为了使Controller中的参数注解起效，需要如下配置 -->
+    <mvc:annotation-driven/>
+    <!-- 静态资源映射，防止过滤访问不到 -->
+    <mvc:resources mapping="/js/**" location="/js/" />
+    <mvc:resources mapping="/image/**" location="/image/" />
+    <mvc:resources mapping="/css/**" location="/css/" />
+    <mvc:resources mapping="/page/**" location="/page/" />
+    <mvc:resources mapping="/*.html" location="/" />
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	<bean id="service" class="com.zte.hacker.rest.service.impl.OpenSourceServiceImpl"/>
+	<bean id="opensourcedao" class="com.zte.hacker.dao.impl.OpenSourceDaoImpl"/>
+	<bean id="addsourcedao" class="com.zte.hacker.dao.impl.AddSourceDaoImpl"/>
+	<bean id="importfileservice" class="com.zte.hacker.rest.service.impl.ImportFileServiceImpl" />
+	<bean id="jobService" class="com.zte.hacker.fetchchangeinfo.JobCronServiceImpl" />
+</beans>
