@@ -55,7 +55,7 @@ pyasn1==0.2.3
 pycairo==1.13.1
 pycparser==2.17
 pycrypto==2.6.1
-Pygments==2.2.0
+Pygments==2.7.4
 pygobject==3.24.1
 pyparsing==2.2.0
 python-dateutil==2.6.0
