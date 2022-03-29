@@ -43,7 +43,7 @@ nbconvert==4.2.0
 nbformat==4.0.1
 notebook==4.2.1
 packaging==16.8
-paramiko==2.1.2
+paramiko==2.10.1
 path.py==8.2.1
 pathlib==1.0.1
 pexpect==4.2.1
