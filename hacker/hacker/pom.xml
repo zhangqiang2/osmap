@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<aspectj.version>1.8.6</aspectj.version>
-		<spring.version>4.3.5.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<jackson.version>1.7.1</jackson.version>
 	</properties>
 	<dependencies>
